@@ -1,0 +1,3 @@
+GET /owa/auth/favicon.ico HTTP/1.1
+Host: localhost
+Cookie: X-AnonResource-Backend=www.bbc.co.uk/#~1; X-AnonResource=true;
